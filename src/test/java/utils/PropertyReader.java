@@ -17,6 +17,9 @@ public class PropertyReader {
     public static String getChromeDriverPath(){
         return  getProperty("CHROME_DRIVER_PATH");
     }
+    public static String getFireFoxDriverPath(){
+        return getProperty("FIREFOX_DRIVER_PATH");
+    }
 
     public static String getChromePath(){
         return  getProperty("CHROME_PATH");

@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 
@@ -18,6 +19,11 @@ public class DriverFactory {
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setBinary(PropertyReader.getChromePath());
                 driver = new ChromeDriver(chromeOptions);
+                break;
+            case FIREFOX:
+                file = new File(PropertyReader.getFireFoxDriverPath());
+                System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
+                driver = new FirefoxDriver();
                 break;
         }
 

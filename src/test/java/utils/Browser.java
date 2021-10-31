@@ -1,5 +1,6 @@
 package utils;
 
 public enum Browser {
-    CHROME
+    CHROME,
+    FIREFOX
 }
