@@ -25,6 +25,14 @@ public class PropertyReader {
         return  getProperty("CHROME_PATH");
     }
 
+    public static String getLogin(){
+        return  getProperty("Login");
+    }
+
+    public static String getPassword(){
+        return  getProperty("Password");
+    }
+
     private static String getProperty(String propertyName) {
         if (System.getProperty(propertyName) == null) {
             return getPropertyFromFile(propertyName);

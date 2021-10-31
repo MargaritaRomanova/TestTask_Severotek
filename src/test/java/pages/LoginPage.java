@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.PropertyReader;
 
 public class LoginPage extends BasePage{
 
@@ -19,11 +20,11 @@ public class LoginPage extends BasePage{
     }
     public void fillLoginField() {
         loginField.click();
-        loginField.sendKeys("selenium");
+        loginField.sendKeys(PropertyReader.getLogin());
     }
     public void fillPasswordField() {
         passwordField.click();
-        passwordField.sendKeys("super_password");
+        passwordField.sendKeys(PropertyReader.getPassword());
     }
     public void pressEntranceButton(){
         entranceButton.click();
